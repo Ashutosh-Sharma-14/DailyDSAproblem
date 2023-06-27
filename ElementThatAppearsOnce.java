@@ -7,24 +7,24 @@ public class ElementThatAppearsOnce {
         System.out.println(res);
     }
 
-    static int search(int[] A,int N){
+    static int search(int[] arr,int n){
         int start = 0;
-        int end = N-1;
+        int end = n-1;
 
         while(start <= end){
             int mid = start + (end-start)/2;
-            if(A[mid]!=A[mid-1] && A[mid]!=A[mid+1]){
-                return A[mid];
+            if(arr[mid]!=arr[mid-1] && arr[mid]!=arr[mid+1]){
+                return arr[mid];
             }
 
             if(mid%2 == 0){
-                if(A[mid] == A[mid+1])
+                if(arr[mid] == arr[mid+1])
                     start = mid+1;
                 else
                     end = mid-1;
             }
             else{
-                if(A[mid] == A[mid-1]){
+                if(arr[mid] == arr[mid-1]){
                     start = mid+1;
                 }
                 else
