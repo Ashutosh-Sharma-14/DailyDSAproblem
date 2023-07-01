@@ -1,3 +1,16 @@
+//Given a sorted and rotated array A of N elements which is rotated at some point, and may contain duplicates and given an element key.
+// Check whether the key exist in the array A or not.
+//
+//        Example 1:
+//
+//        Input:
+//        N = 7
+//        A[] = {2,5,6,0,0,1,2}
+//        key = 0
+//        Output:
+//        1
+//        Explanation:
+//        0 is found at index 3.
 package Medium;
 
 public class SearchInRotatedArray2 {
