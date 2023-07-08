@@ -22,7 +22,9 @@ public class ZigzagTraversal {
             int count = q.size();
             for (int i = 0; i < count; i++) {
                 Node curr = q.poll();
-                if (level%2 == 0){
+//                assert is used to make sure that the current node is not null
+                assert curr != null;
+                if ((level % 2) == 0){
                     lst_for_even_level.add(curr.data);
                 }
                 else{
@@ -33,11 +35,11 @@ public class ZigzagTraversal {
                 if(curr.right!=null) q.add(curr.right);
             }
 
-            if(lst_for_even_level.isEmpty() == false){
+            if(!lst_for_even_level.isEmpty()){
                 Collections.reverse(lst_for_even_level);
                 ans.addAll(lst_for_even_level);
             }
-            level++;
+            level += 1;
         }
         return ans;
     }
