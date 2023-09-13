@@ -1,8 +1,12 @@
 public class MajorityElement {
     public static void main(String[] args) {
-
+        int[] arr = {10,11,10,5,9,10,10,5,10,9};
+        int res = majorityElement(arr,arr.length);
+        System.out.println("The element appearing majority time: " +res);
     }
-//    This question is based on Boyer-Moores Voting Algorithm
+
+    static int majorityElement(int a[],int size){
+//        This question is based on Boyer-Moores Voting Algorithm
     /*
     Approach :
     1. Assume 1st element to be the most occuring element //max_index=0
@@ -20,7 +24,6 @@ public class MajorityElement {
     6. If (a[i] == num ) c++;//num=max_index
     7. Check if c>size/2 if yes return num else return -1;
      */
-    static int majorityElement(int a[],int size){
         int max_index = 0;
         int count = 1;
         for (int i = 1; i < size; i++) {
